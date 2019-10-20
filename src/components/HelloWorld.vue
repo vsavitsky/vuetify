@@ -15,69 +15,24 @@
 
       <v-flex mb-4>
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
+          Videos
         </h1>
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a href="https://community.vuetifyjs.com" target="_blank">Discord Community</a>
-        </p>
+        
       </v-flex>
 
       <v-flex
         mb-5
         xs12
       >
-        <h2 class="headline font-weight-bold mb-3">What's next?</h2>
-
         <v-layout justify-center>
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
+          <div
+            v-for="video in videos"
+            v-bind:key="video"
           >
-            {{ next.text }}
-          </a>
-        </v-layout>
-      </v-flex>
-
-      <v-flex
-        xs12
-        mb-5
-      >
-        <h2 class="headline font-weight-bold mb-3">Important Links</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-layout>
-      </v-flex>
-
-      <v-flex
-        xs12
-        mb-5
-      >
-        <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
+            <video-card 
+              v-bind:video=video
+            />
+          </div>
         </v-layout>
       </v-flex>
     </v-layout>
@@ -85,56 +40,33 @@
 </template>
 
 <script>
+import VideoCard from './VideoCard';
 export default {
+  components: {
+    VideoCard
+  },
   data: () => ({
-    ecosystem: [
+    videos: [
       {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader',
+        title: 'Video 1',
+        language: 'English',
+        description: 'The Video Lesson #1',
+        image_url: 'https://i.ytimg.com/an_webp/C0DPdy98e4c/mqdefault_6s.webp?du=3000&sqp=COL3su0F&rs=AOn4CLAtAMm5st9iY6gI6onfcK-EKai56Q',
+        video_url: 'https://www.youtube.com/embed/C0DPdy98e4c',
       },
       {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify',
+        title: 'Video 2',
+        language: 'English',
+        description: 'The Video Lesson #2',
+        image_url: 'https://i.ytimg.com/an_webp/C0DPdy98e4c/mqdefault_6s.webp?du=3000&sqp=COL3su0F&rs=AOn4CLAtAMm5st9iY6gI6onfcK-EKai56Q',
+        video_url: 'https://www.youtube.com/embed/C0DPdy98e4c',
       },
       {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify',
-      },
-    ],
-    importantLinks: [
-      {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com',
-      },
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com',
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs',
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify',
-      },
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer',
-      },
-      {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/layout/pre-defined',
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
+        title: 'Video 3',
+        language: 'English',
+        description: 'The Video Lesson #3',
+        image_url: 'https://i.ytimg.com/an_webp/C0DPdy98e4c/mqdefault_6s.webp?du=3000&sqp=COL3su0F&rs=AOn4CLAtAMm5st9iY6gI6onfcK-EKai56Q',
+        video_url: 'https://www.youtube.com/embed/C0DPdy98e4c',
       },
     ],
   }),
