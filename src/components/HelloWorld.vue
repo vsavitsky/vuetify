@@ -68,6 +68,20 @@ export default {
         image_url: 'https://i.ytimg.com/an_webp/C0DPdy98e4c/mqdefault_6s.webp?du=3000&sqp=COL3su0F&rs=AOn4CLAtAMm5st9iY6gI6onfcK-EKai56Q',
         video_url: 'https://www.youtube.com/embed/C0DPdy98e4c',
       },
+      {
+        title: 'Video 4',
+        language: 'English',
+        description: 'The Video Lesson #4',
+        image_url: 'https://i.ytimg.com/an_webp/C0DPdy98e4c/mqdefault_6s.webp?du=3000&sqp=COL3su0F&rs=AOn4CLAtAMm5st9iY6gI6onfcK-EKai56Q',
+        video_url: 'https://www.youtube.com/embed/C0DPdy98e4c',
+      },
+      {
+        title: 'Video 5',
+        language: 'English',
+        description: 'The Video Lesson #5',
+        image_url: 'https://i.ytimg.com/an_webp/C0DPdy98e4c/mqdefault_6s.webp?du=3000&sqp=COL3su0F&rs=AOn4CLAtAMm5st9iY6gI6onfcK-EKai56Q',
+        video_url: 'https://www.youtube.com/embed/C0DPdy98e4c',
+      },
     ],
   }),
 };
